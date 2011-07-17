@@ -1,0 +1,7 @@
+<%= ENV["RACK_ENV"] || 'dev' %>:
+  database: <%= ENV['db_name'] %>
+  host: <%= ENV['db_host'] %>
+  port: <%= ENV['db_port'] %>
+  username: <%= ENV['db_user'] %>
+  password: <%= ENV['db_pass'] %>
+
