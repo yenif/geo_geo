@@ -1,11 +1,11 @@
 class GeoGeo
   class Entry
     include Mongoid::Document
-    field :client_guid
+    field :client_guid, type: String
     index :client_guid
 
-    field :location, type: Array, geo: true
-    geo_index :location
+    field :coordinates, type: Array, geo: true
+    geo_index :coordinates
 
     validates_presence_of :client_guid
 
