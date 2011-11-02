@@ -14,3 +14,9 @@ task :spec do
     t.pattern = 'spec/**/*_spec.rb'
   end
 end
+
+require "cucumber/rake/task"
+
+Cucumber::Rake::Task.new(:cucumber) do |task|
+    task.cucumber_opts = ["features"]
+end

@@ -4,6 +4,7 @@ source "http://rubygems.org"
 gem "rake"
 
 gem "sinatra"
+gem "sinatra-contrib", git: 'git://github.com/sinatra/sinatra-contrib.git', require: 'sinatra/contrib'
 gem "bson_ext"
 gem "mongo"
 gem "mongoid"
@@ -19,8 +20,11 @@ group :development, :test do
   gem "rack-test", :require => 'rack/test'
   gem "rspec"
   gem "mongoid-rspec"
-  gem "cucumber"
-  gem "capybara"
-  gem "cucumber-sinatra"
-  gem "json_spec"
 end
+
+group :cucumber do
+  gem "cucumber"
+  gem "cucumber-sinatra"
+  gem "json_spec", :require => 'json_spec/cucumber'
+end
+  #gem "pickle", :require => ['pickle/world', 'pickle/adapters/mongoid']

@@ -1,8 +1,9 @@
 class GeoGeo
   class Entry
     include Mongoid::Document
+
     field :client_guid, type: String
-    index :client_guid
+    index :client_guid, unique: true
 
     field :coordinates, type: Array, geo: true
     geo_index :coordinates

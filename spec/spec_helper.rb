@@ -1,6 +1,6 @@
 Bundler.require :default, :test
 
-Mongoid.config.logger = nil
+#Mongoid.config.logger = nil
 
 $:.unshift File.join(File.dirname(__FILE__), 'lib')
 require 'geo_geo'
